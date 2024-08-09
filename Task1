@@ -1,0 +1,54 @@
+#include<iostream>
+using std::cout;
+using std::cin;
+using std::endl;
+int main()
+{ 
+    int option;
+    float celcius,fahrenhiet,kelvin;
+    
+    cout<<"*************************************"<<endl;
+    cout<<"*********** WELCOME TO TEMPARATURE UNIT CONVERTION PROGRAM **********"<<endl;
+    cout<<"*************************************\n"<<endl;
+    cout<<"****** Please chose unit you want to convert******\n"<<endl;
+    cout<<"**** 1.Celcius ****"<<endl;
+    cout<<"**** 2.Fahrenhiet *****"<<endl;
+    cout<<"**** 3.Kelvin ****"<<endl;
+    
+    cin>>option;
+    
+    switch (option)
+        {
+        case 1:
+              cout<<"Please enter temparature in Celcius"<<endl;
+              cin>>celcius;
+              fahrenhiet = (celcius * 9/5) + 32;
+              kelvin = celcius + 273.15;
+              cout<<"In Fahrenhiet value is "<<fahrenhiet<<endl;
+              cout<<"In Kelvin value is "<<kelvin<<endl;
+              break;
+              
+        case 2:
+              cout<<"Please enter temparature in Fahrenhiet"<<endl;
+              cin>>fahrenhiet;
+              celcius = (fahrenhiet - 32) / 1.8;
+              kelvin = (fahrenhiet + 459.67) /1.8;
+              cout<<"In Celcius value  is "<<celcius<<endl;
+              cout<<"In Kelvin value is "<<kelvin<<endl;
+              break;
+              
+        case 3:
+              cout<<"Please enter temparature in Kelvin"<<endl;
+              cin>>kelvin;
+              celcius = kelvin - 273.15;
+              fahrenhiet = (kelvin * 1.8) - 459.67;
+              cout<<"In Celcius value is "<<celcius<<endl;
+              cout<<"In Kelvin value is "<<fahrenhiet<<endl;
+              break;
+              
+        default:
+               cout<<"Please enter valid option "<<endl;
+               break;
+        }
+        return 0;
+}
